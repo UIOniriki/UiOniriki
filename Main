@@ -5883,7 +5883,7 @@ local SaveManager = {} do
 			end
 		end
 
-		Fluent.SettingLoaded = true
+		Onihub.SettingLoaded = true
 
 		return true, decoded
 	end
@@ -6279,9 +6279,9 @@ function Library:Notify(Config)
 end
 
 if getgenv then
-	getgenv().Fluent = Library
+	getgenv().Onihub = Library
 else
-	Fluent = Library
+	Onihub = Library
 end
 local MinimizeButton = New("TextButton", {
 	BackgroundTransparency = 1,
