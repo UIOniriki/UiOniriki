@@ -1235,14 +1235,14 @@ function Creator.Disconnect()
 end
 
 Creator.Themes = Themes
-Creator.Theme = Creator.Theme or "Darker"
+Creator.Theme = Creator.Theme or "Dark"
 
 function Creator.GetThemeProperty(Property)
 	local Theme = Creator.Themes[Creator.Theme]
 	if Theme then
 		return Theme[Property]
 	end
-	return Creator.Themes.Darker[Property]
+	return Creator.Themes.Dark[Property]
 end
 
 function Creator.UpdateTheme()
