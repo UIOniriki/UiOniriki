@@ -1,3 +1,16 @@
+---@diagnostic disable: lowercase-global, undefined-global, undefined-field
+
+
+
+--[[             |
+'                |   Last changes:     
+FluentPlus 1.2   |   01.01 - fixed this file and mobile support, added a "GUI dragging cooldown".
+dsc.gg/hydrahub  |   31.12 - fixed all themes, more info in discord.
+'                |   30.12 - added themes.
+]]--             |
+
+
+
 local Lighting = game:GetService("Lighting")
 local RunService = game:GetService("RunService")
 local LocalPlayer = game:GetService("Players").LocalPlayer
@@ -5761,7 +5774,7 @@ if RunService:IsStudio() then
 end
 
 local SaveManager = {} do
-	SaveManager.Folder = "Onihub"
+	SaveManager.Folder = "FluentSettings"
 	SaveManager.Ignore = {}
 	SaveManager.Parser = {
 		Toggle = {
@@ -5883,7 +5896,7 @@ local SaveManager = {} do
 			end
 		end
 
-		Onihub.SettingLoaded = true
+		Fluent.SettingLoaded = true
 
 		return true, decoded
 	end
@@ -6082,7 +6095,7 @@ local SaveManager = {} do
 end
 
 local InterfaceManager = {} do
-	InterfaceManager.Folder = "Onihub"
+	InterfaceManager.Folder = "FluentSettings"
 	InterfaceManager.Settings = {
 		Acrylic = true,
 		Transparency = true,
@@ -6279,9 +6292,9 @@ function Library:Notify(Config)
 end
 
 if getgenv then
-	getgenv().Onihub = Library
+	getgenv().Fluent = Library
 else
-	Onihub = Library
+	Fluent = Library
 end
 local MinimizeButton = New("TextButton", {
 	BackgroundTransparency = 1,
@@ -6435,10 +6448,202 @@ AddSignal(MinimizeButton.MouseButton1Click, function()
 	Library.Window:Minimize()
 end)
 
+--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 local httpService = game:GetService("HttpService")
 
 local InterfaceManager = {} do
-	InterfaceManager.Folder = "Onihub"
+	InterfaceManager.Folder = "FluentSettings"
 	InterfaceManager.Settings = {
 		Theme = "Dark",
 		Acrylic = true,
